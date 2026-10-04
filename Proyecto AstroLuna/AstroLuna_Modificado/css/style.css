@@ -1,0 +1,108 @@
+:root {
+  --bg: #be2f9b;
+  --panel: #7b82e4;
+  --accent: #c71e2c;
+  --accent2: #eb747e;
+  --text: #020102;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(circle at 50% 0%, #82c9f3, var(--bg) 70%);
+  color: var(--text);
+  font-family: 'Trebuchet MS', 'Segoe UI', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 12px;
+}
+
+#game-wrap {
+  position: relative;
+  width: 680px;
+  max-width: 100%;
+  background: var(--panel);
+  border: 3px solid #d5d7ec;
+  border-radius: 14px;
+  padding: 14px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+}
+
+h1 {
+  text-align: center;
+  margin: 0 0 10px;
+  letter-spacing: 4px;
+  font-size: 22px;
+  color: var(--accent);
+  text-shadow: 0 0 10px rgba(248, 116, 28, 0.856);
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  background: #000;
+  image-rendering: pixelated;
+}
+
+#hud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: space-between;
+  margin-top: 10px;
+  font-size: 13px;
+  font-weight: bold;
+  background: #7378ac;
+  border-radius: 8px;
+  padding: 8px 12px;
+}
+
+#hud span { white-space: nowrap; }
+#hud-oxygen.low { color: var(--accent); animation: blink 0.6s infinite; }
+
+@keyframes blink { 50% { opacity: 0.3; } }
+
+.screen {
+  position: absolute;
+  inset: 48px 14px 56px 14px;
+  background: rgba(84, 153, 150, 0.92);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 10px;
+  padding: 20px;
+}
+
+.screen h2 {
+  margin: 0;
+  color: var(--accent2);
+  font-size: 24px;
+}
+
+.screen p { margin: 0; max-width: 480px; font-size: 14px; line-height: 1.5; }
+.screen p.controls { font-size: 12px; opacity: 0.8; }
+
+.screen button {
+  margin-top: 8px;
+  padding: 10px 28px;
+  font-size: 15px;
+  font-weight: bold;
+  border: none;
+  border-radius: 24px;
+  background: var(--accent);
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.screen button:hover { background: #a3ff7f; transform: translateY(-2px); }
+
+.hidden { display: none !important; }
