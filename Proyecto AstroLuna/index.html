@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Proyecto Astro Luna</title>
+<style>
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background: radial-gradient(circle at 50% 0%, #1a1d4a, #05061a 70%);
+    color: #f2f2f6;
+    font-family: 'Trebuchet MS', 'Segoe UI', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+  }
+  .wrap { max-width: 480px; text-align: center; }
+  h1 { color: #ff5fa8; letter-spacing: 3px; margin-bottom: 8px; }
+  p { opacity: 0.85; line-height: 1.5; }
+  .links { display: flex; flex-direction: column; gap: 14px; margin-top: 28px; }
+  a.btn {
+    display: block;
+    padding: 14px 20px;
+    border-radius: 10px;
+    background: #12142f;
+    border: 2px solid #2a2d5c;
+    color: #f2f2f6;
+    text-decoration: none;
+    font-weight: bold;
+    transition: border-color 0.15s ease, transform 0.15s ease;
+  }
+  a.btn:hover { border-color: #ff5fa8; transform: translateY(-2px); }
+  a.btn span { display: block; font-weight: normal; font-size: 13px; opacity: 0.7; margin-top: 4px; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>ASTRO LUNA</h1>
+    <p>Proyecto de Tecnologías de Creación Digital. Elige qué versión quieres abrir:</p>
+    <div class="links">
+      <a class="btn" href="AstroLuna/index.html">
+        Juego original
+        <span>Versión base del proyecto</span>
+      </a>
+      <a class="btn" href="AstroLuna-Modificado/index.html">
+        Mi copia personalizada
+        <span>Nombre en el HUD y colores propios</span>
+      </a>
+    </div>
+  </div>
+</body>
+</html>
